@@ -155,8 +155,8 @@ jobs:
       CF_SPACE: sandbox
       MYSQL_IP: {{mysql-ip}}
       DATABASE_NAME: {{registration-database-name}}
-      DATABASE_USERNAME: {{registration--username}}
-      DATABASE_PASSWORD: {{registration--password}}
+      DATABASE_USERNAME: {{registration-username}}
+      DATABASE_PASSWORD: {{registration-password}}
   - put: cf
     params:
       manifest: pal-tracker/manifest-registration.yml
