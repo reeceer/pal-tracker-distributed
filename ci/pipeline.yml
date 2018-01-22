@@ -101,10 +101,15 @@ jobs:
       CF_PASSWORD: {{cf-password}}
       CF_ORG: {{cf-org}}
       CF_SPACE: sandbox
+
       MYSQL_IP: {{mysql-ip}}
       DATABASE_NAME: {{allocations-database-name}}
       DATABASE_USERNAME: {{allocations-database-username}}
       DATABASE_PASSWORD: {{allocations-database-password}}
+
+      DATABASE_SERVICE_NAME: tracker_allocations_dev
+      CF_APP_NAME: tracker-allocations
+
   - put: cf
     params:
       manifest: pal-tracker/manifest-allocations.yml
@@ -131,6 +136,10 @@ jobs:
       DATABASE_NAME: {{backlog-database-name}}
       DATABASE_USERNAME: {{backlog-database-username}}
       DATABASE_PASSWORD: {{backlog-database-password}}
+
+      DATABASE_SERVICE_NAME: tracker_backlog_dev
+      CF_APP_NAME: tracker-backlog
+
   - put: cf
     params:
       manifest: pal-tracker/manifest-backlog.yml
@@ -157,6 +166,10 @@ jobs:
       DATABASE_NAME: {{registration-database-name}}
       DATABASE_USERNAME: {{registration-database-username}}
       DATABASE_PASSWORD: {{registration-database-password}}
+
+      DATABASE_SERVICE_NAME: tracker_registration_dev
+      CF_APP_NAME: tracker-registration
+
   - put: cf
     params:
       manifest: pal-tracker/manifest-registration.yml
@@ -183,6 +196,10 @@ jobs:
       DATABASE_NAME: {{timesheets-database-name}}
       DATABASE_USERNAME: {{timesheets-database-username}}
       DATABASE_PASSWORD: {{timesheets-database-password}}
+
+      DATABASE_SERVICE_NAME: tracker_timesheets_dev
+      CF_APP_NAME: tracker-timesheets
+      
   - put: cf
     params:
       manifest: pal-tracker/manifest-timesheets.yml
