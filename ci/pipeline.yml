@@ -107,7 +107,7 @@ jobs:
       DATABASE_USERNAME: {{allocations-database-username}}
       DATABASE_PASSWORD: {{allocations-database-password}}
 
-      DATABASE_SERVICE_NAME: tracker_allocations_dev
+      DATABASE_FOLDER_NAME: allocations-database
       CF_APP_NAME: tracker-allocations
 
   - put: cf
@@ -137,7 +137,7 @@ jobs:
       DATABASE_USERNAME: {{backlog-database-username}}
       DATABASE_PASSWORD: {{backlog-database-password}}
 
-      DATABASE_SERVICE_NAME: tracker_backlog_dev
+      DATABASE_FOLDER_NAME: backlog-database
       CF_APP_NAME: tracker-backlog
 
   - put: cf
@@ -167,7 +167,7 @@ jobs:
       DATABASE_USERNAME: {{registration-database-username}}
       DATABASE_PASSWORD: {{registration-database-password}}
 
-      DATABASE_SERVICE_NAME: tracker_registration_dev
+      DATABASE_FOLDER_NAME: registration-database
       CF_APP_NAME: tracker-registration
 
   - put: cf
@@ -197,9 +197,9 @@ jobs:
       DATABASE_USERNAME: {{timesheets-database-username}}
       DATABASE_PASSWORD: {{timesheets-database-password}}
 
-      DATABASE_SERVICE_NAME: tracker_timesheets_dev
+      DATABASE_FOLDER_NAME: timesheets-database
       CF_APP_NAME: tracker-timesheets
-      
+
   - put: cf
     params:
       manifest: pal-tracker/manifest-timesheets.yml
