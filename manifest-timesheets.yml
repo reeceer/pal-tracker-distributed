@@ -4,10 +4,13 @@ applications:
   host: timesheets-pal-reece
   memory: 1G
   instances: 1
-#  env:
-#    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-reece.apps.pikes.pal.pivotal.io
+  env:
+    GRANT_TYPE: client_credentials
+    SECURITY_USER_NAME: actuator
+    SECURITY_USER_PASSWORD: operations4red
   services:
   - tracker-timesheets-database
   - tracker-service-registry
   - tracker-circuit-breaker-dashboard
+  - tracker-sso
 
